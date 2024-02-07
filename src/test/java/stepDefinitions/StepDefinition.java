@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import io.cucumber.java.en.Given;
 import manage.QueryManage;
 import org.junit.Assert;
@@ -15,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 public class StepDefinition {
 
     ResultSet resultSet;
-    String query;
+    MysqlxDatatypes.Scalar.String query;
     QueryManage queryManage = new QueryManage();
 
     @Given("Database baglantisi kurulur.")
@@ -27,7 +28,7 @@ public class StepDefinition {
     public void query01_hazirlanir_ve_execute_edilir() throws SQLException {
 
         query = queryManage.getQuery01();
-        resultSet = JDBCReusableMethods.getStatement().executeQuery(query);
+        resultSet = JDBCReusableMethods.getStatement().executeQuery(String.valueOf(query));
 
     }
     @Given("ResultSet01 sonuclari islenir.")
@@ -50,7 +51,7 @@ public class StepDefinition {
  @Given("Query02 hazirlanir ve execute edilir.")
  public void query02_hazirlanir_ve_execute_edilir() throws SQLException {
     query = queryManage.getQuery02();
-    resultSet = JDBCReusableMethods.getStatement().executeQuery(query);
+    resultSet = JDBCReusableMethods.getStatement().executeQuery(String.valueOf(query));
 
  }
     @Given("ResultSet02 sonuclari islenir.")

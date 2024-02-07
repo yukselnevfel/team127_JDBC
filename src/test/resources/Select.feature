@@ -19,3 +19,29 @@ Feature: SELECT QUERY EXECUTE
      * Query02 hazirlanir ve execute edilir.
      * ResultSet02 sonuclari islenir.
      * Database baglantisi kapatilir.
+   Scenario: Database üzerinde "Users" tablosunda "country_code=TR" olmayan ve "id=11" olan datanın "firstname"
+ve "lastname" bilgilerini doğrulayınız.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
