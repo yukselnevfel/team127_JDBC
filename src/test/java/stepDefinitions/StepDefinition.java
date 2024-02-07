@@ -3,7 +3,7 @@ package stepDefinitions;
 import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import io.cucumber.java.en.Given;
 import manage.QueryManage;
-import org.junit.Assert;
+import org.junit.Assert.*;
 import utilities.JDBCReusableMethods;
 
 import java.sql.ResultSet;
@@ -16,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 public class StepDefinition {
 
     ResultSet resultSet;
-    MysqlxDatatypes.Scalar.String query;
+    String query;
     QueryManage queryManage = new QueryManage();
 
     @Given("Database baglantisi kurulur.")
@@ -75,6 +75,11 @@ public class StepDefinition {
     }
 
 }
-
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/yukselnevfel/team127_JDBC.git
+git push -u origin main
 
 
